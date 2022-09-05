@@ -1,0 +1,20 @@
+{
+	
+	public static void main(String[] args)
+	{
+		String[][] poltrona = new String[6][4];
+		String resp = "N";
+		int fileira,coluna;
+		
+		for(int linha=0;linha<=5;linha++)
+		{
+			Arrays.fill(poltrona[linha], "L");
+		}
+		while(!resp.equalsIgnoreCase("S"))
+		{
+			fileira = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite a fileira: ")) ;
+			coluna = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite a coluna: ")) ;
+			poltrona[fileira][coluna] = "V";
+			resp = JOptionPane.showInputDialog(null, "Sair? (S/N)");
+		}
+	}
